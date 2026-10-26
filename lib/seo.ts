@@ -31,7 +31,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'pt_BR',
+      locale: 'en_AU',
       type: 'website',
       images: [
         {
@@ -84,23 +84,7 @@ export function generateLocalBusinessSchema() {
       latitude: CLINIC_INFO.primaryLocation.coordinates.lat,
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
-    openingHoráriosSpecification: CLINIC_INFO.schedule
-      .flatMap((item) => {
-        const range = item.hours.match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)[–-](\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
-        if (!range || item.hours.toLowerCase() === 'closed') return [];
-        const to24Hour = (hourText: string, minuteText: string, meridiem: string) => {
-          let hour = Number(hourText) % 12;
-          if (meridiem.toUpperCase() === 'PM') hour += 12;
-          return `${String(hour).padStart(2, '0')}:${minuteText}`;
-        };
-        const dayOfWeek = [item.day];
-        return [{
-        '@type': 'OpeningHoráriosSpecification',
-        dayOfWeek,
-        opens: to24Hour(range[1], range[2] || '00', range[3]),
-        closes: to24Hour(range[4], range[5] || '00', range[6]),
-      }];
-      }),
+    openingHours: 'Mo-Su 00:00-23:59',
   };
 }
 
@@ -110,7 +94,7 @@ export function generateServiceSchema(serviceName: string, description: string, 
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Reformas, pintura e reparos residenciais',
+    serviceType: 'Roof repairs, re-roofing and guttering',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',
@@ -146,3 +130,8 @@ export function generateBreadcrumbSchema(items: { name: string; path: string }[]
     })),
   };
 }
+
+
+
+
+

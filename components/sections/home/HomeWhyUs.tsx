@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Conversa clara',
-    description: 'Converse diretamente com a equipe sobre o serviço que você precisa.',
+    title: 'Clear communication',
+    description: 'Speak directly with Joe about your roof or guttering issue.',
   },
   {
-    title: 'Alinhamento do escopo',
-    description: 'Alinhe o escopo e os prazos do serviço para seu imóvel.',
+    title: 'Detailed quotes',
+    description: 'Know what work is recommended and what is included before it begins.',
   },
   {
-    title: 'Planejamento das etapas',
-    description: 'Converse sobre o serviço, o orçamento e as próximas etapas do seu projeto.',
+    title: 'Photo updates',
+    description: 'Inspection, progress and completion photos keep you informed.',
   },
   {
-    title: 'Serviços para sua casa',
-    description: 'Converse com a equipe sobre pintura personalizada, reformas residenciais, reparos hidráulicos e gerais, trincas, infiltrações e envernizamento de madeira.',
+    title: 'Roofing and guttering',
+    description: 'From hard-to-find leaks and tile repairs to re-roofing, gutters, downpipes and gutter guard.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Nosso jeito de trabalhar
+                Why choose Go With Joe
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Serviços para renovar e cuidar da sua casa
+                Roof repairs done with care and attention to detail
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,21 +65,21 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                    src="/images/plumbing-technician.jpg"
+                    src="/images/roofing-hero.png"
                     alt="Serviço residencial"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#111820]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Pintura e reformas residenciais
+                  <div className="absolute bottom-3 left-3 bg-[#15191E]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Roof repairs and guttering
                   </div>
                 </div>
-                {/* Additional reparos hidráulicos imagery */}
+                {/* Additional roof repair imagery */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/plumbing-repair.jpg"
+                    src="/images/roof-repair.png"
                     alt="Projeto residencial"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
@@ -87,16 +87,16 @@ export default function HomeWhyUs() {
                   />
                 </div>
                 {/* Projeto residencial detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F7FA] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F5F7] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/plumbing-pipes.jpg"
-                    alt="Reparos e acabamentos"
+                    src="/images/roofb3-1.jpg"
+                    alt="Roof repairs and guttering"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#111820]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                     Reparos residenciais
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#15191E]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                     Roofing projects
                   </div>
                 </div>
               </div>
@@ -107,3 +107,9 @@ export default function HomeWhyUs() {
     </section>
   );
 }
+
+
+
+
+
+

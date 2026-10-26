@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Pintura e reformas em Palmeiras de Goiás, GO',
+  title: 'Roof repairs and guttering in Warriewood, NSW',
   description:
-    'A Azzure Construção e Reforma realiza pintura residencial, reformas e reparos em Palmeiras de Goiás. Ligue para +55 64 99932-1901 e converse sobre seu projeto.',
+    'Go With Joe provides roof repairs, guttering and re-roofing across Warriewood and Sydney Northern Beaches. Call +61 432 616 008.',
   pathname: '/',
 });
 
@@ -44,10 +44,10 @@ export default function HomePage() {
       {/* SECTION 2A: Avaliações de clientes */}
       <HomeReviews />
 
-      {/* SECTION 3: Serviços residenciais */}
+      {/* SECTION 3: Roofing services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Serviços residenciais"
+        title="Roofing services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Azzure Construção e Reforma */}
+      {/* SECTION 4: Why Choose Go With Joe Roof Repairs & Guttering */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Nossa equipe */}
@@ -67,7 +67,7 @@ export default function HomePage() {
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Serviços residenciais Projects */}
+      {/* SECTION 9: Roofing services Projects */}
       <HomeGallery />
 
       {/* SECTION 10: Dúvidas frequentes */}
@@ -81,3 +81,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
+
+
+

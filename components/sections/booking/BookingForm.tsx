@@ -27,7 +27,7 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'reparos-gerais',
+    service: 'roof-repairs',
     preferredDate: '',
     preferredTime: 'Manhã (7h–12h)',
     notes: '',
@@ -40,16 +40,16 @@ export default function BookingForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Informe seu nome completo.';
+      newErrors.fullName = 'Enter your full name.';
     }
     if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      newErrors.phone = 'Informe um telefone válido.';
+      newErrors.phone = 'Enter a valid phone number.';
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
-      newErrors.email = 'Informe um endereço de e-mail válido.';
+      newErrors.email = 'Enter a valid email address.';
     }
     if (!formData.preferredDate) {
-      newErrors.preferredDate = 'Selecione uma data de preferência.';
+      newErrors.preferredDate = 'Select a preferred date.';
     }
 
     setErrors(newErrors);
@@ -72,28 +72,28 @@ export default function BookingForm() {
     return (
       <div className="p-8 md:p-12 bg-forest text-paper transition-all duration-500 ease-nova-ease">
         <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-          Solicitação recebida
+          Enquiry received
         </span>
       <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          Orçamento solicitado
+          Quote requested
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Obrigado(a), {formData.fullName}. Nossa equipe recebeu sua solicitação e entrará em contato pelo telefone <strong className="text-lime">{formData.phone}</strong> para conversar sobre o atendimento.
+          Obrigado(a), {formData.fullName}. Joe has received your enquiry and will contact you at <strong className="text-lime">{formData.phone}</strong> to discuss the work.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Serviço solicitado:</span>
+            <span className="text-paper/60">Service requested:</span>
             <span className="text-paper font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Data de preferência:</span>
+            <span className="text-paper/60">Preferred date:</span>
             <span className="text-paper font-medium">{formData.preferredDate}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Período de preferência:</span>
+            <span className="text-paper/60">Preferred time:</span>
             <span className="text-paper font-medium">{formData.preferredTime}</span>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'reparos-gerais',
+                service: 'roof-repairs',
                 preferredDate: '',
                 preferredTime: 'Manhã (7h–12h)',
                 notes: '',
@@ -116,13 +116,13 @@ export default function BookingForm() {
             }}
             className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
           >
-            Enviar outra solicitação
+            Send another enquiry
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
             className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
           >
-            Precisa de ajuda? Ligue: {CLINIC_INFO.contact.phone}
+            Need help? Call Joe: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
@@ -137,17 +137,17 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Solicite um orçamento
+          Request a quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Conte o que deseja fazer. Nossa equipe entrará em contato para conversar sobre o projeto e as próximas etapas.
+          Tell Joe what you need. He will follow up to discuss the project and next steps.
         </p>
       </div>
 
-      {/* Nome completo */}
+      {/* Name completo */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="fullName" className="font-body text-13 text-forest-ink/70">
-          Nome completo <span className="text-forest">*</span>
+          Name completo <span className="text-forest">*</span>
         </label>
         <input
           id="fullName"
@@ -157,22 +157,22 @@ export default function BookingForm() {
             setFormData({ ...formData, fullName: e.target.value });
             if (errors.fullName) setErrors({ ...errors, fullName: undefined });
           }}
-          placeholder="Ex.: Maria da Silva"
+          placeholder="e.g. Alex Smith"
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#5B6068] transition-all duration-200">
+          <span className="font-body text-13 text-[#69727C] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
       </div>
 
-      {/* Phone & E-mail Row */}
+      {/* Phone & Email Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="phone" className="font-body text-13 text-forest-ink/70">
-            Telefone <span className="text-forest">*</span>
+            Phone <span className="text-forest">*</span>
           </label>
           <input
             id="phone"
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+55 64 99932-1901"
+            placeholder="+61 432 616 008"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#5B6068]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#69727C]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#5B6068]">{errors.email}</span>
+            <span className="font-body text-13 text-[#69727C]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Tipo de serviço <span className="text-forest">*</span>
+          Service type <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,15 +229,15 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Outro serviço residencial</option>
+          <option value="general-consultation">Other roofing service</option>
         </select>
       </div>
 
-      {/* Data de preferência & Time */}
+      {/* Preferred date & Time */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredDate" className="font-body text-13 text-forest-ink/70">
-            Data de preferência <span className="text-forest">*</span>
+            Preferred date <span className="text-forest">*</span>
           </label>
           <input
             id="preferredDate"
@@ -252,13 +252,13 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#5B6068]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#69727C]">{errors.preferredDate}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredTime" className="font-body text-13 text-forest-ink/70">
-            Período de preferência
+            Preferred time
           </label>
           <select
             id="preferredTime"
@@ -266,9 +266,9 @@ export default function BookingForm() {
             onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-paper cursor-pointer"
           >
-            <option value="Manhã (8h–12h)">Manhã (8h–12h)</option>
-            <option value="Tarde (12h–16h)">Tarde (12h–16h)</option>
-            <option value="Fim da tarde (16h–17h30)">Fim da tarde (16h–17h30)</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Late afternoon">Late afternoon</option>
           </select>
         </div>
       </div>
@@ -276,14 +276,14 @@ export default function BookingForm() {
       {/* Additional project notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Conte sobre o serviço (opcional)
+          Tell us about the work (optional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Descreva o serviço ou projeto sobre o qual deseja conversar..."
+          placeholder="Describe the roof or guttering issue..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>
@@ -297,12 +297,20 @@ export default function BookingForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto"
         >
-          {isSubmitting ? 'Enviando solicitação...' : 'Solicitar orçamento'}
+          {isSubmitting ? 'Sending enquiry...' : 'Request a quote'}
         </Button>
         <span className="font-body text-13 text-forest-ink/60">
-          Usaremos seus dados para responder à sua solicitação.
+          We will use your details to respond to your enquiry.
         </span>
       </div>
     </form>
   );
 }
+
+
+
+
+
+
+
+

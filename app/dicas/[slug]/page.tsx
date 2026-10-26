@@ -28,9 +28,9 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   if (!post) return {};
 
   return createMetadata({
-    title: `${post.title} | Dicas para sua casa`,
+    title: `${post.title} | Roofing advice`,
     description: post.excerpt,
-    pathname: `/dicas/${post.slug}/`,
+    pathname: `/blog/${post.slug}/`,
     image: post.leadImage,
   });
 }
@@ -48,7 +48,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     title: p.title,
     subtitle: `${p.category} • ${p.readTime}`,
     description: p.excerpt,
-    href: `/dicas/${p.slug}/`,
+    href: `/blog/${p.slug}/`,
     theme: idx % 2 === 1 ? 'forest' : 'paper',
   }));
 
@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe Azzure Construção e Reforma',
+      name: author?.name || 'Equipe Go With Joe Roof Repairs & Guttering',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,9 +86,9 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Dicas para sua casa', path: '/dicas/' },
-              { name: post.category, path: '/dicas/' },
-              { name: post.title, path: `/dicas/${post.slug}/` },
+              { name: 'Roofing advice', path: '/blog/' },
+              { name: post.category, path: '/blog/' },
+              { name: post.title, path: `/blog/${post.slug}/` },
             ]}
           />
 
@@ -122,7 +122,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                   </div>
                   <div>
                     <Link
-                      href={`/equipe/${author.slug}/`}
+                      href={`/team/${author.slug}/`}
                       className="font-display text-17 text-forest-ink hover:text-forest font-medium block"
                     >
                       {author.name}
@@ -188,18 +188,18 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                     href={`/${relatedService.slug}/`}
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Conheça {relatedService.navLabel} →
+                    Explore {relatedService.navLabel} →
                   </Link>
                 </div>
               </AnimateOnScroll>
             )}
 
-            {/* Article Dúvidas frequentes */}
+            {/* Article Frequently asked questions */}
             {post.content.faqs && post.content.faqs.length > 0 && (
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="pt-8 border-t border-mist">
                   <h3 className="font-display text-26 text-forest-ink mb-6">
-                    Dúvidas sobre o assunto
+                    Questions about this topic
                   </h3>
                   <Accordion items={post.content.faqs} />
                 </div>
@@ -223,16 +223,16 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Dicas para sua casa
+                Roofing advice
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Converse com nossa equipe sobre seu projeto
+                Talk to Joe about your roofing project
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/orcamento/" variant="lime" size="lg">
-              Solicitar orçamento
+            <Button href="/request-a-quote/" variant="lime" size="lg">
+              Request a quote
             </Button>
           </AnimateOnScroll>
         </div>
@@ -240,3 +240,8 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     </div>
   );
 }
+
+
+
+
+

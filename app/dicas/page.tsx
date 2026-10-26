@@ -9,10 +9,10 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Dicas para sua casa',
+  title: 'Roofing advice',
   description:
-    'Dicas e informações sobre pintura, reformas residenciais e reparos da Azzure Construção e Reforma.',
-  pathname: '/dicas/',
+    'Roofing advice from Go With Joe: roof repairs, gutter maintenance and re-roofing.',
+  pathname: '/blog/',
 });
 
 export default function BlogIndexPage() {
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Dicas para sua casa', path: '/dicas/' }]} />
+          <Breadcrumbs items={[{ name: 'Roofing advice', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Dicas para sua casa
+                  Roofing advice
                 </span>
-                <WordRevealH1 text="Ideias para planejar seu próximo projeto de pintura ou reforma." />
+                <WordRevealH1 text="Practical advice for roof repairs and guttering." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Read practical guides to reparos hidráulicos repairs, reparos hidráulicos repairs and arranging reparos hidráulicos work.
+                  Read practical guides to spotting roof leaks, maintaining gutters and planning a roof replacement.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -60,7 +60,7 @@ export default function BlogIndexPage() {
                       {/* Title & Excerpt */}
                       <div className="lg:col-span-7">
                         <h2 className="font-display text-21 md:text-26 text-forest-ink group-hover:text-forest transition-colors mb-2">
-                          <Link href={`/dicas/${post.slug}/`} className="no-underline text-inherit">
+                          <Link href={`/blog/${post.slug}/`} className="no-underline text-inherit">
                             {post.title}
                           </Link>
                         </h2>
@@ -77,7 +77,7 @@ export default function BlogIndexPage() {
                       {/* Action */}
                       <div className="lg:col-span-2 text-left lg:text-right">
                         <Link
-                          href={`/dicas/${post.slug}/`}
+                          href={`/blog/${post.slug}/`}
                           className="font-body text-13 text-forest font-medium underline underline-offset-4 group-hover:text-forest-light"
                         >
                           Read Article →
@@ -94,3 +94,10 @@ export default function BlogIndexPage() {
     </div>
   );
 }
+
+
+
+
+
+
+

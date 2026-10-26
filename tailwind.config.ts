@@ -11,34 +11,34 @@ const config: Config = {
       colors: {
         paper: {
           DEFAULT: '#FFFFFF',
-          secondary: '#F5F7FA',
+          secondary: '#F3F5F7',
         },
         forest: {
-          DEFAULT: '#07152F',
-          ink: '#111820',
-          light: '#5B6068',
-          navy: '#07152F',
+          DEFAULT: '#0B141C',
+          ink: '#15191E',
+          light: '#69727C',
+          navy: '#0B141C',
         },
         brand: {
-          DEFAULT: '#092C91',
-          black: '#07152F',
-          hover: '#2861C5',
-          soft: '#7197DC',
-          navy: '#061B5C',
-          text: '#111820',
-          secondaryText: '#5B6068',
-          border: '#DCE2EB',
+          DEFAULT: '#FF4B0B',
+          black: '#0B141C',
+          hover: '#FF6528',
+          soft: '#FF8A4C',
+          navy: '#121E28',
+          text: '#15191E',
+          secondaryText: '#69727C',
+          border: '#E1E5E9',
         },
-        lime: '#092C91',
-        greenAccent: '#092C91',
-        orangeAccent: '#092C91',
-        mist: '#DCE2EB',
-        softBlue: '#7197DC',
-        redAccent: '#092C91',
-        royalBlueAccent: '#061B5C',
+        lime: '#FF4B0B',
+        greenAccent: '#FF4B0B',
+        orangeAccent: '#FF4B0B',
+        mist: '#E1E5E9',
+        softBlue: '#FF8A4C',
+        redAccent: '#FF4B0B',
+        royalBlueAccent: '#121E28',
         navy: {
-          DEFAULT: '#061B5C',
-          dark: '#07152F',
+          DEFAULT: '#121E28',
+          dark: '#0B141C',
         },
       },
       fontFamily: {
@@ -78,3 +78,4 @@ const config: Config = {
 };
 
 export default config;
+

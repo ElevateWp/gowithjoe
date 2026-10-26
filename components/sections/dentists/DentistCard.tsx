@@ -21,7 +21,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Azzure Construção e Reforma logo */}
+        {/* Go With Joe Roof Repairs & Guttering logo */}
         <div className="relative w-full aspect-[4/5] bg-paper overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
           {/* Full logo stays visible inside the profile frame */}
           <Image
@@ -53,7 +53,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
             {dentist.title}
           </span>
           <h3 className="font-display text-21 sm:text-24 md:text-26 text-forest-ink group-hover:text-forest transition-colors mb-2">
-            <Link href={`/equipe/${dentist.slug}/`} className="no-underline text-inherit">
+            <Link href={`/team/${dentist.slug}/`} className="no-underline text-inherit">
               {dentist.name}
             </Link>
           </h3>
@@ -77,3 +77,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
     </AnimateOnScroll>
   );
 }
+
+
+
+

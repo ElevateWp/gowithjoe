@@ -11,17 +11,17 @@ import { BASE_URL, generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Azzure Construção e Reforma | Reformas e pintura em Palmeiras de Goiás',
+    default: 'Go With Joe | Roof Repairs & Guttering in Warriewood',
     template: '%s',
   },
   description:
-    'Pintura residencial, reformas e reparos em Palmeiras de Goiás. Ligue ou chame a Azzure no WhatsApp: +55 64 99932-1901.',
+    'Roof repairs, leak detection, re-roofing and guttering in Warriewood and Sydney Northern Beaches. Call +61 432 616 008.',
   keywords: [
-    'Azzure Construção e Reforma',
-    'serviços residenciais Palmeiras de Goiás e região',
-    'reformas residenciais',
+    'Go With Joe Roof Repairs & Guttering',
+    'roof repairs Warriewood Northern Beaches',
+    'roof repairs and guttering',
   ],
-  authors: [{ name: 'Azzure Construção e Reforma' }],
+  authors: [{ name: 'Go With Joe Roof Repairs & Guttering' }],
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="en-AU" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -48,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#7197DC] selection:text-[#111820]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#FF8A4C] selection:text-[#15191E]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -66,3 +66,10 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
+
+
+

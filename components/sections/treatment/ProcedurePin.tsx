@@ -131,7 +131,7 @@ export default function ProcedurePin({
                 </p>
                 <div className="p-3.5 sm:p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80 block">
-                    <strong className="text-forest font-medium">Detalhes:</strong>{' '}
+                    <strong className="text-forest font-medium">Details:</strong>{' '}
                     {step.clinicalDetails}
                   </span>
                 </div>
@@ -143,3 +143,8 @@ export default function ProcedurePin({
     </section>
   );
 }
+
+
+
+
+

@@ -13,16 +13,16 @@ export default function HomeLocation() {
         <AnimateOnScroll animation="fade-up" duration={0.8}>
           <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Contato & Horário de atendimento
+              Contact & availability
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Entre em contato
+              Talk to Joe
             </h2>
           </div>
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Columns 1–6: Address, Contato & Horário de atendimento Table */}
+          {/* Columns 1–6: Address, Contact & availability Table */}
           <div className="lg:col-span-6 flex flex-col space-y-8">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <div>
@@ -33,7 +33,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.city} {CLINIC_INFO.primaryLocation.postalCode}
                 </p>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  Entre em contato para conversar sobre seu projeto e confirmar a disponibilidade.
+                  Call to discuss your roof or guttering project and confirm availability.
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -42,7 +42,7 @@ export default function HomeLocation() {
                 )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F5F7FA] border border-[#DCE2EB] px-3 py-1.5 text-12 text-[#111820]">
+                    <span key={highlight} className="bg-[#F3F5F7] border border-[#E1E5E9] px-3 py-1.5 text-12 text-[#15191E]">
                       {highlight}
                     </span>
                   ))}
@@ -54,7 +54,7 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
               <div>
                 <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-3 font-semibold">
-                  Horário de atendimento
+                  Availability
                 </span>
                 <div className="border border-mist overflow-hidden bg-paper shadow-sm p-4 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.length > 0
@@ -63,7 +63,7 @@ export default function HomeLocation() {
                           <span>{item.day}</span><span>{item.hours}</span>
                         </div>
                       ))
-                    : 'Ligue para confirmar a disponibilidade.'}
+                    : 'Call Joe to confirm availability.'}
                 </div>
               </div>
 
@@ -75,8 +75,8 @@ export default function HomeLocation() {
                 >
                   Ligar agora
                 </Button>
-                  <Button href="/contato/" variant="forest" size="md">
-                  Fale conosco
+                  <Button href="/contact/" variant="forest" size="md">
+                  Contact Joe
                 </Button>
               </div>
             </AnimateOnScroll>
@@ -87,14 +87,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/plumbing-technician.jpg"
-                  alt="Serviço residencial"
+                  src="/images/roofing-hero.png"
+                  alt="Roofing work"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Azzure Construção e Reforma
+                  Go With Joe Roof Repairs & Guttering
                 </div>
               </div>
             </AnimateOnScroll>
@@ -103,17 +103,17 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Serviços residenciais
+                    Roofing services
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Pintura, reformas residenciais e reparos
+                    Roof repairs and guttering
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Ligue ou chame a equipe no WhatsApp para conversar sobre o serviço que você precisa.
+                    Call Joe to discuss your roofing or guttering needs.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-                    <span>Telefone: {CLINIC_INFO.contact.phone}</span>
+                    <span>Phone: {CLINIC_INFO.contact.phone}</span>
                   </div>
                 </div>
 
@@ -122,11 +122,11 @@ export default function HomeLocation() {
                     {CLINIC_INFO.contact.phone}
                   </span>
                   <Button
-                    href="/contato/"
+                    href="/contact/"
                     variant="forest"
                     size="sm"
                   >
-                    Fale conosco
+                    Contact Joe
                   </Button>
                 </div>
               </div>
@@ -137,3 +137,11 @@ export default function HomeLocation() {
     </section>
   );
 }
+
+
+
+
+
+
+
+

@@ -49,7 +49,7 @@ export default function HomeHero() {
   return (
     <div
       data-slipstream-demo
-      className="-mt-[88px] sm:-mt-[100px] md:-mt-[112px] relative w-full bg-white border-b border-[#DCE2EB] overflow-clip"
+      className="-mt-[88px] sm:-mt-[100px] md:-mt-[112px] relative w-full bg-white border-b border-[#E1E5E9] overflow-clip"
       style={{
         width: "100%",
         containerType: "inline-size",
@@ -74,8 +74,8 @@ export default function HomeHero() {
           min-height:48px;
           padding:0 28px;
           gap:20px;
-          background:#092C91;
-          border:1px solid #061B5C;
+          background:#FF4B0B;
+          border:1px solid #121E28;
           border-radius:9999px;
           color:#ffffff;
           font-size:14px;
@@ -85,28 +85,28 @@ export default function HomeHero() {
           transition:all .2s ease;
         }
         [data-slipstream-demo] [data-gp-enter]:hover{
-          background:#2861C5;
+          background:#FF6528;
           box-shadow:0 8px 26px rgba(9,44,145,0.45);
           transform:translateY(-1px);
         }
         [data-slipstream-demo] [data-gp-enter]:focus-visible{
-          outline:2px solid #07152F;
+          outline:2px solid #0B141C;
           outline-offset:4px;
         }
         [data-slipstream-demo] [data-gp-touch-picker]{top:auto;bottom:18px;left:50%;}
         [data-slipstream-demo] [data-gp-select]{
-          border:1px solid #DCE2EB;
+          border:1px solid #E1E5E9;
           border-radius:8px;
           font-size:12px;
-          color:#111820;
+          color:#15191E;
           background:#ffffff;
         }
-        [data-ch-hero-header]{position:absolute;inset:clamp(24px,4.5cqw,48px) clamp(24px,5cqw,64px) auto;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#111820;}
+        [data-ch-hero-header]{position:absolute;inset:clamp(24px,4.5cqw,48px) clamp(24px,5cqw,64px) auto;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#15191E;}
         [data-ch-hero-brand]{font-size:19px;font-weight:700;letter-spacing:-.045em;}
-        [data-ch-hero-category]{font-size:12px;line-height:1.5;color:#5B6068;text-align:right;}
-        [data-ch-hero-intro]{position:absolute;inset:auto 24px calc(100% - var(--gp-word-top,35%) + 32px);margin:0;max-width:none;text-align:center;color:#5B6068;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:.01em;}
-        [data-ch-hero-support]{position:absolute;inset:calc(var(--gp-word-bottom,50%) + 32px) 24px auto;margin:0 auto;max-width:42ch;text-align:center;color:#5B6068;font-size:16px;font-weight:400;line-height:1.5;text-wrap:balance;}
-        [data-sublime-scroll]{position:absolute;inset:auto 24px 7%;text-align:center;color:#5B6068;font-size:11px;letter-spacing:.01em;}
+        [data-ch-hero-category]{font-size:12px;line-height:1.5;color:#69727C;text-align:right;}
+        [data-ch-hero-intro]{position:absolute;inset:auto 24px calc(100% - var(--gp-word-top,35%) + 32px);margin:0;max-width:none;text-align:center;color:#69727C;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:.01em;}
+        [data-ch-hero-support]{position:absolute;inset:calc(var(--gp-word-bottom,50%) + 32px) 24px auto;margin:0 auto;max-width:42ch;text-align:center;color:#69727C;font-size:16px;font-weight:400;line-height:1.5;text-wrap:balance;}
+        [data-sublime-scroll]{position:absolute;inset:auto 24px 7%;text-align:center;color:#69727C;font-size:11px;letter-spacing:.01em;}
         @media(any-pointer:coarse){[data-sublime-scroll]{bottom:12%;}}
         @media(any-pointer:coarse){[data-sublime-scroll]{bottom:13%;}}
         @container(max-width:450px){
@@ -124,7 +124,7 @@ export default function HomeHero() {
         [data-slipstream-demo] [data-gp-content]{
           padding:6rem clamp(1.25rem,5cqw,5rem) 6.5rem;
           font-family:inherit;
-          background:#07152F;
+          background:#0B141C;
           color:#ffffff;
         }
         [data-slipstream-demo] section,[data-slipstream-demo] [data-gp-caption]{font-family:inherit;}
@@ -166,14 +166,14 @@ export default function HomeHero() {
         }
         [data-slipstream-feature] p{
           margin:.55rem 0 0;
-          color:#DCE2EB;
+          color:#E1E5E9;
           font-size:.9375rem;
           line-height:1.55;
         }
         [data-slipstream-no]{
           display:inline-block;
           margin-right:.7rem;
-          color:#092C91;
+          color:#FF4B0B;
           font:700 .8125rem ui-monospace,monospace;
           letter-spacing:.08em;
           transform:translateY(-.1em);
@@ -188,27 +188,27 @@ export default function HomeHero() {
 
       {face ? (
         <GlyphPortal
-          word="AZZURE"
+          word="Go With Joe"
           fontFamily={face}
           fontWeight={700}
           style={{
             fontFamily: face,
             "--gp-paper": "#FFFFFF",
-            "--gp-ink": "#111820",
-            "--gp-field": "#07152F",
+            "--gp-ink": "#15191E",
+            "--gp-field": "#0B141C",
             "--gp-foreground": "#FFFFFF",
           }}
           scrollLength={2.2}
           interactive={true}
           annotations={false}
-          enterLabel="Conheça a Azzure"
+          enterLabel="Meet Go With Joe"
           underlay={
             <div
               className="absolute inset-0 overflow-hidden pointer-events-none"
               aria-hidden="true"
             >
               <Image
-                src="/images/plumbing-pipes.jpg"
+                src="/images/roofing-hero.png"
                 alt=""
                 fill
                 priority
@@ -231,9 +231,9 @@ export default function HomeHero() {
                 transform: "scale(var(--gp-field-scale,1))",
               }}
             >
-              {/* Reparos hidráulicos photo at low opacity inside the glyph zoom destination */}
+              {/* Roof repair photo inside the animated word */}
               <Image
-                src="/images/plumbing-technician.jpg"
+                src="/images/roof-repair.png"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -244,7 +244,7 @@ export default function HomeHero() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "radial-gradient(circle at 18% 12%, rgba(9,44,145,0.28), transparent 38%), radial-gradient(circle at 82% 22%, rgba(6,27,92,0.35), transparent 32%), linear-gradient(135deg, rgba(7,21,47,0.94) 0%, rgba(7,21,47,0.9) 50%, rgba(7,21,47,0.96) 100%)",
+                    "radial-gradient(circle at 18% 12%, rgba(255,75,11,0.28), transparent 38%), radial-gradient(circle at 82% 22%, rgba(18,30,40,0.35), transparent 32%), linear-gradient(135deg, rgba(11,20,28,0.94) 0%, rgba(11,20,28,0.9) 50%, rgba(11,20,28,0.96) 100%)",
                 }}
               />
             </div>
@@ -252,74 +252,74 @@ export default function HomeHero() {
           front={
             <>
               <div data-ch-hero-header>
-                <span data-ch-hero-brand>Azzure Construção e Reforma</span>
-                <span data-ch-hero-category>Palmeiras de Goiás · Goiás<br />Palmeiras de Goiás e região</span>
+                <span data-ch-hero-brand>Go With Joe Roof Repairs & Guttering</span>
+                <span data-ch-hero-category>Warriewood · NSW<br />Sydney Northern Beaches</span>
               </div>
-              <p data-ch-hero-intro>Serviços de pintura, reformas e reparos residenciais.</p>
+              <p data-ch-hero-intro>Roof repairs and guttering</p>
               <p data-ch-hero-support>
-                Pintura, reformas residenciais e reparos em Palmeiras de Goiás, com cuidado e atenção aos detalhes.
+                Roof repairs, leak detection and guttering across Sydney Northern Beaches.
               </p>
-              <span data-sublime-scroll>Role para conhecer ↓</span>
+              <span data-sublime-scroll>Scroll to explore ↓</span>
             </>
           }
         >
           <div data-slipstream-copy>
             <h2>
-              Pintura, reformas e reparos residenciais com atenção a cada detalhe.
+              Roof repairs and guttering, with clear communication from inspection to completion.
             </h2>
 
             <div data-slipstream-features>
               <div data-slipstream-feature>
                 <h3>
                   <span data-slipstream-no>01</span>
-                  Pintura e reparos
+                  Roof repairs
                 </h3>
                 <p>
-                  Pintura residencial com atenção a cada detalhe e ao acabamento.
+                  Repairs for leaks, storm damage, broken tiles and more.
                 </p>
               </div>
 
               <div data-slipstream-feature>
                 <h3>
                   <span data-slipstream-no>02</span>
-                  Reformas residenciais
+                  Guttering & downpipes
                 </h3>
                 <p>
-                  Reformas e reparos para renovar e cuidar da sua casa.
+                  Gutter repairs, replacement, downpipes and gutter guard.
                 </p>
               </div>
 
               <div data-slipstream-feature>
                 <h3>
                   <span data-slipstream-no>03</span>
-                  Reparos e acabamentos
+                  Re-roofing
                 </h3>
                 <p>
-                  Converse com a equipe sobre o escopo e os detalhes do seu projeto.
+                  Quality workmanship, fair quotes and photo updates.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
-                href="https://wa.me/5564999321901"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#092C91] px-7 font-body text-sm font-semibold text-white shadow-[0_6px_20px_rgba(9,44,145,0.35)] transition-all hover:bg-[#2861C5] hover:shadow-[0_8px_26px_rgba(9,44,145,0.45)]"
+                href="https://wa.me/61432616008"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#FF4B0B] px-7 font-body text-sm font-semibold text-white shadow-[0_6px_20px_rgba(9,44,145,0.35)] transition-all hover:bg-[#FF6528] hover:shadow-[0_8px_26px_rgba(9,44,145,0.45)]"
               >
-                Chamar no WhatsApp
+                Call Joe
                 <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/5564999321901"
+                href="https://wa.me/61432616008"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 font-body text-sm font-semibold text-white transition-all hover:bg-white/20"
               >
-                <Phone size={15} className="text-[#2861C5]" />
-                WhatsApp Azzure
+                <Phone size={15} className="text-[#FF6528]" />
+                Call Joe
               </a>
               <a
                 href="#home-stats"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 font-body text-sm font-medium text-white/90 hover:bg-white/15 hover:text-white transition-all"
               >
-                <span>Veja avaliações e serviços</span>
+                <span>See reviews and services</span>
                 <ArrowDown size={15} />
               </a>
             </div>
@@ -332,7 +332,7 @@ export default function HomeHero() {
             height: "80vh",
             display: "grid",
             placeItems: "center",
-            color: "#111820",
+            color: "#15191E",
             fontSize: 14,
             fontWeight: 500,
           }}
@@ -343,3 +343,11 @@ export default function HomeHero() {
     </div>
   );
 }
+
+
+
+
+
+
+
+

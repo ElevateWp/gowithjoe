@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: DentistProfileProps): Promise
   return createMetadata({
     title: `${dentist.name} | ${dentist.title}`,
     description: dentist.bio,
-    pathname: `/equipe/${dentist.slug}/`,
+    pathname: `/team/${dentist.slug}/`,
     image: dentist.image,
   });
 }
@@ -67,8 +67,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Equipe Azzure', path: '/equipe/' },
-              { name: dentist.name, path: `/equipe/${dentist.slug}/` },
+              { name: 'Joe & the team', path: '/team/' },
+              { name: dentist.name, path: `/team/${dentist.slug}/` },
             ]}
           />
 
@@ -79,7 +79,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src={dentist.image}
-                    alt={`Foto de ${dentist.name}`}
+                    alt={`Photo of ${dentist.name}`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -87,7 +87,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Experiência da equipe:</span>
+                  <span>Team experience:</span>
                   <span className="font-medium text-forest">{dentist.experienceYears}+ anos de atuação</span>
                 </div>}
               </AnimateOnScroll>
@@ -108,7 +108,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="p-6 bg-mist/30 border-l-2 border-forest mb-8 shadow-sm">
                   <span className="font-body text-13 text-forest font-medium uppercase tracking-wider block mb-2">
-                    Nosso jeito de trabalhar
+                    How we work
                   </span>
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed italic">
                     “{dentist.philosophy}”
@@ -116,11 +116,11 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4">
-                  <Button href="/orcamento/" variant="forest" size="lg">
-                    Solicitar orçamento from {dentist.name}
+                  <Button href="/request-a-quote/" variant="forest" size="lg">
+                    Request a quote from {dentist.name}
                   </Button>
-                  <Button href="/equipe/" variant="ghost" size="lg">
-                    Back to Nossa equipe
+                  <Button href="/team/" variant="ghost" size="lg">
+                    Back to the team
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -178,7 +178,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   Areas of Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Serviços da equipe {dentist.name}
+                  Team services {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -215,16 +215,16 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Solicitar orçamento
+                Request a quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Deseja solicitar um orçamento para seu projeto com {dentist.name}?
+                Would you like a roofing quote from Joe and the team?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/orcamento/" variant="lime" size="lg">
-              Solicitar orçamento
+            <Button href="/request-a-quote/" variant="lime" size="lg">
+              Request a quote
             </Button>
           </AnimateOnScroll>
         </div>
@@ -232,3 +232,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
     </div>
   );
 }
+
+
+
+
+
+
+
